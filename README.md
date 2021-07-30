@@ -1,6 +1,6 @@
 # Algorithms
 There are some well-known sorting and searching algorithms,
-which placed here for learning objectives.
+which placed here for learning objectives. 
 
 Bubble sort in Sort_bubble.py
 
@@ -14,4 +14,10 @@ Quicksort in Sort_quick.py
 
 Merge sort in Sort_merge.py
 
-Heapsort in Sort_heap.py
+Heapsort in Sort_heap.py 
+
+Linear search in Search_linear.py
+
+Binary search in Search_binary.py
+
+Knuth-Morris-Pratt algorithm in Search_KMP.py
