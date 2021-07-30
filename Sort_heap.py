@@ -4,9 +4,8 @@ def heapsort(list):
     n = len(list)
     buildheap(list)
     H = []
-    #for i in range(n-1, 0, -1):
     size = n
-    #i = 0
+    
     while size >= 1:
         H.append(list[0])
         list[0], list[size-1] = list[size-1], list[0]
