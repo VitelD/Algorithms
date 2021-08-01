@@ -1,24 +1,20 @@
 def prefix(image):
     # O(n)
     prefix = []
-    i = 0
-    j = 1
+    i = 1
     prefix.append(0)
     
-    while i != len(image)-1:
-        if image[i] == image[j]:
-            prefix.append(j+1)
-            i += 1
-            j += 1
-        elif (j == 0):
-            prefix.append(0)
-            i += 1
-        else:
+    while i != len(image):
+        j = prefix[i-1]
+        while j > 0 and image[i] != image[j]:
             j = prefix[j-1]
+        if image[i] == image[j]:
+            j += 1
+        prefix.append(j)
+        i += 1
     
     return prefix
 
-  
 def KMP(mas, image, p):
     # O(m)
     n = len(image)
@@ -38,11 +34,7 @@ def KMP(mas, image, p):
         else:
             l = p[l-1]
 
-            
-im = 'ABCDABD'
-stroka = 'ABC ABCDAB ABCDABCDABDE'
+im = 'abcabcd'
+stroka = 'ABC ABCDAB abcabcd ABCDABCDABDE'
 pi = prefix(im)
 print(KMP(stroka, im, pi))
-
-        
-    
